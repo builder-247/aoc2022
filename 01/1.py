@@ -1,7 +1,6 @@
 f = open('input.txt', 'r')
 lines = f.readlines()
 
-elfs = []
 sums = []
 
 buffer = []
@@ -12,14 +11,10 @@ for line in lines:
         buffer.append(calories)
         sum += calories
     else:
-        elfs.append(buffer)
         sums.append(sum)
-        elfs = []
         sum = 0
 
 sums.sort()
 
 print(f'Most calories is {sums[-1]}')
-
-print(elfs)
-print(sums)
+print(f'The top three Elves are carrying {sums[-1] + sums[-2] + sums[-3]}')
