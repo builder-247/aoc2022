@@ -3,12 +3,10 @@ lines = f.readlines()
 
 sums = []
 
-buffer = []
 sum = 0
 for line in lines:
     if line != '\n':
         calories = int(line)
-        buffer.append(calories)
         sum += calories
     else:
         sums.append(sum)
